@@ -1,0 +1,9 @@
+Design Goals and Notes for a Lithium-Polymer/Lithium Ion battery pack management system.
+
+Design Requirements:
+
+Prospective components:
+
+Resources:
+
+
