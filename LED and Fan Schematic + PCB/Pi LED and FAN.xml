@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>C:\Users\alexa\Desktop\Everything\Electrical Engineering\Pi LED and FAN\Pi LED and FAN.sch</source>
+    <date>8/4/2019 1:29:19 PM</date>
+    <tool>Eeschema (5.1.2)-2</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Combined GPIO controlled Fan and Button LED</title>
+        <company>Alexander Wang</company>
+        <rev>1</rev>
+        <date/>
+        <source>Pi LED and FAN.sch</source>
+        <comment number="1" value="A new design that resolves the phantom voltage from GPIO pins when device is halted."/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="M1">
+      <value>Fan</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Motor" part="Fan" description="Fan"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D47329C</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>1N4007</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4007" description="1000V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D477775</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>470</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D479312</tstamp>
+    </comp>
+    <comp ref="Q2">
+      <value>P2N2222A</value>
+      <footprint>TO92</footprint>
+      <fields>
+        <field name="Field4">TO-92 NXP Semiconductors</field>
+        <field name="Field5">None</field>
+        <field name="Field6">Unavailable</field>
+        <field name="Field8">P2N2222A</field>
+      </fields>
+      <libsource lib="P2N2222A" part="P2N2222A" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D47A305</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>10k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D48351A</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>GPIO Pin 3</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x01_Male" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D48508A</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>LED</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D4873F5</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>P2N2222A</value>
+      <footprint>TO92</footprint>
+      <fields>
+        <field name="Field4">TO-92 NXP Semiconductors</field>
+        <field name="Field5">None</field>
+        <field name="Field6">Unavailable</field>
+        <field name="Field8">P2N2222A</field>
+      </fields>
+      <libsource lib="P2N2222A" part="P2N2222A" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D488AA0</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>470</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D489EDE</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>GPIO Pin 4</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x01_Male" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D48B4D6</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>10k</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D48D4CE</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Conn_01x01_Male">
+      <description>Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x01_Male</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="1N4001">
+      <aliases>
+        <alias>1N4002</alias>
+        <alias>1N4003</alias>
+        <alias>1N4004</alias>
+        <alias>1N4005</alias>
+        <alias>1N4006</alias>
+        <alias>1N4007</alias>
+        <alias>BA157</alias>
+        <alias>BA158</alias>
+        <alias>BA159</alias>
+      </aliases>
+      <description>50V 1A General Purpose Rectifier Diode, DO-41</description>
+      <docs>http://www.vishay.com/docs/88503/1n4001.pdf</docs>
+      <footprints>
+        <fp>D*DO?41*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">1N4001</field>
+        <field name="Footprint">Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Motor" part="Fan">
+      <description>Fan</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>PinHeader*P2.54mm*</fp>
+        <fp>TerminalBlock*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">M</field>
+        <field name="Value">Fan</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="P2N2222A" part="P2N2222A">
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">P2N2222A</field>
+        <field name="Footprint">TO92</field>
+        <field name="Datasheet">ON Semiconductor</field>
+        <field name="Field4">TO-92 NXP Semiconductors</field>
+        <field name="Field5">None</field>
+        <field name="Field6">Unavailable</field>
+        <field name="Field8">P2N2222A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="E" type="passive"/>
+        <pin num="2" name="B" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Connector.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Device.lib</uri>
+    </library>
+    <library logical="Diode">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Diode.lib</uri>
+    </library>
+    <library logical="Motor">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Motor.lib</uri>
+    </library>
+    <library logical="P2N2222A">
+      <uri>C:/Users/alexa/Desktop/Everything/Electrical Engineering/symbol libraries/P2N2222A/P2N2222A.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(J1-Pad1)">
+      <node ref="J1" pin="1"/>
+      <node ref="R2" pin="2"/>
+      <node ref="R1" pin="2"/>
+    </net>
+    <net code="2" name="Net-(Q1-Pad2)">
+      <node ref="Q1" pin="2"/>
+      <node ref="R2" pin="1"/>
+    </net>
+    <net code="3" name="Net-(D1-Pad1)">
+      <node ref="D1" pin="1"/>
+      <node ref="Q1" pin="3"/>
+    </net>
+    <net code="4" name="+5V">
+      <node ref="M1" pin="1"/>
+      <node ref="D1" pin="2"/>
+      <node ref="D2" pin="1"/>
+    </net>
+    <net code="5" name="GND">
+      <node ref="Q1" pin="1"/>
+      <node ref="R3" pin="1"/>
+      <node ref="R1" pin="1"/>
+      <node ref="Q2" pin="1"/>
+    </net>
+    <net code="6" name="Net-(D2-Pad2)">
+      <node ref="M1" pin="2"/>
+      <node ref="Q2" pin="3"/>
+      <node ref="D2" pin="2"/>
+    </net>
+    <net code="7" name="Net-(Q2-Pad2)">
+      <node ref="Q2" pin="2"/>
+      <node ref="R4" pin="1"/>
+    </net>
+    <net code="8" name="Net-(J2-Pad1)">
+      <node ref="R3" pin="2"/>
+      <node ref="R4" pin="2"/>
+      <node ref="J2" pin="1"/>
+    </net>
+  </nets>
+</export>
