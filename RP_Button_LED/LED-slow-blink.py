@@ -8,15 +8,15 @@ GPIO.setwarnings(False)
 
 def channelOn():
    GPIO.setmode(GPIO.BOARD)
-   GPIO.setup(7, GPIO.OUT) #Pin 7 is GPIO 4
+   GPIO.setup(11, GPIO.OUT) #Pin 11 is GPIO 17
 
 def pulseOn():
     #Turns on the LED
-    GPIO.output(7, GPIO.HIGH)
+    GPIO.output(11, GPIO.HIGH)
 
 def pulseOff():
     #Turns off the LED
-    GPIO.output(7, GPIO.LOW)
+    GPIO.output(11, GPIO.LOW)
 
 try:
     #Main code

@@ -6,6 +6,6 @@ GPIO.setmode(GPIO.BOARD)
 
 GPIO.setwarnings(False)
 
-GPIO.setup(7, GPIO.OUT) #Pin 7 is GPIO 4
+GPIO.setup(11, GPIO.OUT) #Pin 11 is GPIO 17
 
-GPIO.output(7, not GPIO.input(7))
+GPIO.output(11, not GPIO.input(11))

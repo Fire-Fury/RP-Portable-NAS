@@ -6,6 +6,6 @@ GPIO.setmode(GPIO.BOARD)
 
 GPIO.setwarnings(False)
 
-GPIO.setup(3, GPIO.OUT) #Pin 3 is GPIO 2
+GPIO.setup(12, GPIO.OUT) # Pin 12 is GPIO 18
 
-GPIO.output(3, not GPIO.input(3))
+GPIO.output(12, not GPIO.input(12))

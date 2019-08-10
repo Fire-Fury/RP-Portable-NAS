@@ -6,11 +6,11 @@ GPIO.setmode(GPIO.BOARD)
 
 GPIO.setwarnings(False)
 
-GPIO.setup(12, GPIO.OUT)
+GPIO.setup(11, GPIO.OUT) #Pin 11 is GPIO pin 17
 
-fan_on = GPIO.input(12)
+fan_on = GPIO.input(11)
 
 if(fan_on):
-	print("Fan is on")
+	print("LED is on")
 else:
-	print("Fan is off")
+	print("LED is off")
