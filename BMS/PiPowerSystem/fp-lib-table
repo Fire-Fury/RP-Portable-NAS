@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name "USB C")(type KiCad)(uri "C:/Users/alexa/Desktop/Everything/Electrical Engineering/symbol libraries/Type-C.pretty-master")(options "")(descr ""))
+  (lib (name variousICS)(type KiCad)(uri "C:/Users/alexa/Desktop/Everything/Electrical Engineering/symbol libraries/misc_footprints-master/misc_footprints.pretty")(options "")(descr ""))
+  (lib (name TP4056)(type KiCad)(uri "C:/Users/alexa/Desktop/Everything/Electrical Engineering/symbol libraries/TP4056")(options "")(descr ""))
+)

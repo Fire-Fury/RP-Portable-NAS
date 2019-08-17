@@ -1,9 +1,20 @@
 Design Goals and Notes for a Lithium-Polymer/Lithium Ion battery pack management system.
 
 Design Requirements:
+1.Step up voltage from Lithium-Polymer battery pack’s +3.7-4.2V to a steady 5V required to power Raspberry Pi.
+
+2.Prevent over charging and over discharging of the connected Lithium Ion/Lithium Polymer battery pack.
+
+3.Incorporate a USB-C or MicroUSB port to charge the attached battery pack or to supply power to Raspberry Pi computer.
+
+4.Switch from battery power to cable-supplied power seamlessly when plugged in. And vice-versa.
+
+5.Charge the attached battery.
 
 Prospective components:
+1. MicroUSB female receptacle
+2. TX Instruments LM26221 Low Input Voltage, Step-up DC-DC converter
 
 Resources:
 
-
+https://0creativeengineering0.blogspot.com/2019/05/diy-li-ion-cell-charger-using-tp4056.html 

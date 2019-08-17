@@ -1,0 +1,593 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0101)http://www.learningaboutelectronics.com/Articles/Switch-mode-power-supply-circuit-with-an-MC34063.php -->
+<html xmlns="http://www.w3.org/1999/xhtml" class="gr__learningaboutelectronics_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>How to Build a Switch Mode Power Supply Circuit with an MC34063</title>
+<meta name="keywords" content="switch mode power supply, SMPS, circuit, MC34063">
+<meta name="description" content="In this project, we show how to build a switch mode power 
+supply circuit with a MC34063 chip. ">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/default66.css" rel="stylesheet" type="text/css" media="screen">
+<script type="text/javascript" src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/jread"></script></head>
+<body data-gr-c-s-loaded="true">
+<!-- start header -->
+<div id="header">
+	<div id="logo">
+		<h2><a href="http://www.learningaboutelectronics.com/">Learning about Electronics</a></h2>
+	</div>
+<!--	<div id="rss"><a href="#">Subscribe to RSS Feed</a></div> -->
+<!-- 
+	<div id="search">
+		<form id="searchform" method="get" action="">
+			<fieldset>
+				<input type="text" name="s" id="s" size="15" value="" />
+				<input type="submit" id="x" value="Search" />
+			</fieldset>
+		</form>
+	</div>
+-->
+</div>
+<!-- end header -->
+<!-- star menu -->
+﻿
+<script type="text/javascript" src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/jquery.js.download"></script>
+<script type="text/javascript" src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/nav.js.download"></script>
+
+
+<div id="spancolumns">
+<br><hr>
+<span class="menu-trigger"><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/mobile.png"></span> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+<largetext><form id="thisinline" action="http://www.learningaboutelectronics.com/Articles/search.php" method="POST"><input type="text" name="search_entered" size="15">
+<input type="submit" name="submit" value="Search">
+</form></largetext>
+
+
+<br><hr>
+</div>
+
+
+
+<div class="nav-menu">
+	<ul>
+		<li><a href="http://www.learningaboutelectronics.com/">Home</a></li>
+		<li><a href="http://www.learningaboutelectronics.com/Articles">Articles</a></li>
+		<li class="current_page_item"><a href="http://www.learningaboutelectronics.com/Projects">Projects</a></li>
+		<li><a href="https://www.docpid.com/">Forum <font size="3" color="red">posts</font></a></li>
+		<li><a href="http://www.learningaboutelectronics.com/Calculators">Calculators</a></li>
+		<li><a href="http://www.learningaboutelectronics.com/Contact">Contact</a></li>
+	</ul>
+</div>
+
+
+<!-- end menu -->
+<!-- start page -->
+ 
+<div id="page">
+<!-- 
+<div id="left_img">
+<img src="images/dreamstimefree-small.jpg"/>
+</div>
+-->
+	<!-- start ads -->
+<div id="rightads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-7591845391773873";
+/* Large Vertical Ad- image and text */
+google_ad_slot = "3652005880";
+google_ad_width = 300;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript" src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/f.txt">
+</script></div>
+	<!-- end ads -->
+	<!-- start content -->
+		<div class="post">
+<!--			<div class="title">
+			</div>
+-->
+			<div class="entry">
+				<h1>How to Build a Switch Mode Power Supply Circuit with an MC34063</h1><br><br><br>
+<img style="width: 187px; height: 170px;" alt="MC34063 switching regulator" src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/MC34063-switching-regulator.png">
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br>
+
+<p id="para1">In this project, we will show how to build a switch mode power supply circuit with a MC34063 chip. 
+A switch mode power supply is also called a switched mode power supply or a switching mode power supply.
+
+</p><p id="para1">A switch mode power supply is a power supply that regulates a certain power output.  
+A switch mode power supply switches on and off to keep the desired voltage output. 
+It switches on when the power is below the desired output and once the power output is above the desired output it switches off. 
+Therefore, the voltage gets a little above the desired voltage output and a little below the desired output voltage, but it's negligible 
+how little it varies from the desired voltage output range. It pretty much stays right on course of the desired voltage output. 
+
+</p><p id="para1">By switching on and off, the switching mode power supply can obtain a much higher power efficiency than a linear power supply. 
+A linear power supply does not switch on and off. It has a continuous flow of power into it. Therefore, it's less efficient than a switching mode 
+power supply which is off for periods of time. When the switch mode power supply is completely off, it is using no power at all during these
+times. switch mode power supplies can obtain efficiencies of over 90%. Linear power supplies can have horrible power efficiencies. 
+Let's use the example of us using a linear power supply of a 9V and we want 5V output. This is a power efficiency of, power efficiency= 
+(power output/power ) * 100%= (5V/9V) * 100, which is a power efficiency of 55%. This means we are wasting 45% of the power supplied to 
+the circuit. This is a huge waste. Well-designed swithced mode power supplies can achieve much greater efficiencies. This is the advantage
+of switch mode power supplies. It offers greater power efficiencies and, thus, less wasted power. For one, a pulse or square waveform is 
+fed into a switch mode power supply. As said before, a switch mode power supply does not use continuous power. It uses on-and-off power, 
+a square wave or a pwm wave. It makes it more power efficient because at the off times of each cycle, the circuit isn't even using any 
+power at all. A linear power supply, on the other hand, uses continous power that is always on. 
+
+</p><p id="para1">We'll go over in more detail how a switch mode power supply works and is able to sustain a continuous 
+power output, even while the input power is off for a period of time. 
+
+</p><p id="para1">We show how to build the circuit below. 
+
+
+
+</p><p id="para1">And even though a switch mode power supply offers increased power efficiency, 
+
+
+
+
+
+
+
+
+<br><br><br>
+
+
+
+
+
+
+
+</p><div id="rightads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-7591845391773873";
+/* Large Vertical Ad- image and text */
+google_ad_slot = "3652005880";
+google_ad_width = 300;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript" src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/f.txt">
+</script></div>
+<p id="para6">Components Needed</p>
+
+<ul id="para1">
+<li>MC34063 Regulator Chip</li>
+<li>1K‎Ω resistor</li>
+<li>7K‎Ω resistor</li>
+<li>180Ω resistor</li>
+<li>270pF ceramic capacitor</li>
+<li>39μH inductor</li>
+<li>2 100μF electrolytic capacitor</li>
+</ul>
+
+<br><br>
+
+
+
+<p id="para1">The MC34063 is a very versatile chip. It is a
+DC-DC converter chip that can be used as a buck converter, 
+a boost converter, or an inverter. So it can function as a step-up 
+converter, a step-down converter, or an inverter with a combination of 
+step-up or step-down function. 
+
+
+</p><p id="para1">It is used in many types of devices in order to 
+regulate voltages 
+and it is very common. It is used in everyday devices 
+such as car chargers for 
+instance to regulate voltage levels. So it's an industry-standard 
+device.
+It's created by a host of different electronic manufacturers, so 
+it can be obtained very cheaply. 
+
+</p><p id="para1">The MC34063 has can operate on an input voltage of 
+3V-40V. It has output switch curren capability of up to 1.5A. The 
+output voltage is adjustable. And it can switch power at frequencies 
+up to 100KHz. 
+
+</p><p id="para1">The datasheet for the MC34063 chip can be found at the following link:
+<a href="http://www.learningaboutelectronics.com/Datasheets/MC34063-switching-regulator-datasheet.PDF">
+MC34063 Switching Regulator Datasheet</a>.
+
+</p><p id="para1">It's an 8-pin chip. 
+
+</p><p id="para1">The pinout of the chip is shown below. 
+
+<br><br>
+<img style="width: 354px; height: 232px;" alt="MC34063 switching regulator pinout" src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/MC34063-switching-regulator-pinout.png">
+<br><br>
+
+</p><p id="para1">Pin 1 is the switch collector and pin 8 is the drive collector 
+in the chip. These pins are the collectors of the 2 internal transistors 
+in the chip. The switching power supply works through saturating a transistor 
+at various intervals. Through saturating a transistor at repeat intervals, a
+power level can be achieved at desired levels. Unlike a linear power 
+supply, in which the transistor is always saturated, in a switching 
+power supply, the power supply is only saturated at certain time intervals
+and off during others. This allows for more efficient use of power and less
+power waste. So these pins of the collectors of this periodic transistor
+saturation. 
+
+</p><p id="para1">Pin 2 is the emitter of both of the switch and drive 
+transistors. It simply connects to ground. 
+
+</p><p id="para1">Pin 3 is the timing capacitor chip. To this pin, a capacitor 
+is connected that determines the switching speed of the circuit. 
+
+</p><p id="para1">Pin 4 is the ground of the reference voltage regulator. Inside
+the MC34063 is a reference regulator that inputs 1.25V into a comparator
+inside the chip. This comparator allows us to determine the gain of the 
+output voltage by the formula, V<small>OUT</small>= 1.25V (1 + R<small>2</small>/R<small>1</small>.
+More is explained about this in depth below. But since this pin is the 
+ground of the reference voltage regulator, we simply connect it to ground. 
+
+
+</p><p id="para1">Pin 5 is the comparator inverting input terminal. To the 
+noninverting terminal is the 1.25V input from the 1.25 reference voltage
+regulator. To the inverting terminal, we connect a resistor network 
+that allows us to determine the output voltage gain. So this this pin, 
+we will connect 2 resistors, R<small>1</small> and R<small>2</small> that allows 
+us to decide what the gain of the circuit will be. 
+
+</p><p id="para1">Pin 6 is the power pin, V<small>CC</small>. To this pin, 
+we connect our positive voltage supply. The pin can operate from 3V to 40V of power. 
+So we can input this range of voltage to this pin. From this voltage, the chip uses
+power for the internal transistors, comparator, as well as other components. So the power 
+inserted into V<small>CC</small> runs a lot internally for the chip. 
+
+</p><p id="para1">Pin 7 is the I<small>PK</small> pin. It holds the maximum 
+current that runs through the transistor, which will run through the 
+inductor and diode, since they are connected to the output 
+of the transistor. To this pin, we place a resistor that we calculate based on a 
+a formula from the datasheet. This resistor sets the maximum current. 
+
+</p><p id="para1">For the diode, we use a 1N5819 diode, which is a schottky barrier rectifier diode. It is used because it has a lower voltage drop than a silicion diode, so it's more power efficient
+for this circuit.
+
+</p><p id="para1">In this circuit, we're going to use the MC34063 chip in step-up mode 
+so that it boosts the voltage that we supply it. 
+
+</p><p id="para1">We're going to step up 5V to 10V with a current output of 100mA. 
+
+</p><p id="para1">The MC34063 datasheet has example circuits for the 
+3 modes of the chip: step-up, step-down, and inverter. 
+
+</p><p id="para1">If you look at the example circuit of the MC34063 circuit 
+in step-up mode, it converts 12V to 28V. This is a bit high of a 
+voltage to deal with. Therefore, in our circuit, we tone it down
+and make it the input voltage 5V and the output voltage 10V. 
+
+</p><p id="para1">In order to bias our circuit and get the output voltage
+that we want for the input voltage that we put in, we can need to calculate
+several values for our circuit. 
+
+</p><div id="rightads">
+<script async="" src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/f(1).txt"></script>
+<!-- Long ad Text or image -->
+<ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-7591845391773873" data-ad-slot="7055274289"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+<h3>Switch Mode Power Supply Circuit built with an MC34063 Chip</h3>
+<p id="para1">The switch mode power supply circuit that we will build with an 
+MC34063 chip is shown below. 
+
+<br><br>
+<img style="width: 643px; height: 439px;" alt="Switch mode power supply circuit with an MC34063 chip" src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/Switch-mode-power-supply-circuit-with-an-MC34063.png">
+
+
+
+
+
+
+<br><br>
+
+</p><p id="para1">The breadboard circuit of the circuit above is shown below. 
+
+<br><br>
+
+<img style="width: 795px; height: 607px;" alt="Switch mode power supply breadboard circuit with an MC34063 chip" src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/Switch-mode-power-supply-breadboard-circuit-with-an-MC34063.png">
+
+
+
+
+<br><br>
+
+
+
+</p><div id="rightads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-7591845391773873";
+/* Large Vertical Ad- image and text */
+google_ad_slot = "3652005880";
+google_ad_width = 300;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript" src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/f.txt">
+</script></div>
+
+<p id="para1">So the circuits are shown above. How we calculated most of the values of the components of each 
+of the parts of the circuits are through the formulas on the data.
+
+
+</p><p id="para1">On the datasheet for the MC34063, there are a bunch of 
+formulas there for the calculations we need to do. 
+
+</p><p id="para1">We will go through each and every one of them so that 
+we can have as much control over our circuit as possible. These formulas will determine the values of the external inductors, resistors, and capacitors used in the circuit, so it must 
+be done. 
+
+
+</p><p id="para1">T<small>ON</small>/T<small>OFF</small>= (V<small>OUT</small> + V<small>F</small> - V<small>IN (MIN)</small>)/
+(V<small>IN (MIN)</small> - V<small>SAT</small>)= (15V + 0.4V - 4.5V)/(4.5V - 0.45V)≈ 1.5μs. 
+
+</p><p id="para1">V<small>OUT</small> is the voltage that we want output, which is 10V. We are trying to convert the 5V input into 15V output. 
+
+</p><p id="para1">V<small>F</small> is the voltage drop of the diode that you are using. You may have to consult the datasheet for the diode you are using. 
+This value usually doesn't vary too much and won't be too critical because it is such a small value, so it doesn't hold that much weight in the equation. 
+
+</p><p id="para1">V<small>IN (MIN)</small> is the minimum voltage that V<small>IN</small> can be. Being that we want V<small>IN</small> to be 5V, we will use this value as 
+V<small>IN (MIN)</small>. 
+
+</p><p id="para1">V<small>SAT</small> is the saturation voltage of the internal transistor in the chip. To find the value of the saturation voltage, you need to consult the datasheet. 
+If you go to the electrical characteristics table in the datasheet, 
+there are 2 saturation voltages listed. The first saturation voltage, 
+with the darlington connection, applies to step-down circuits. Therefore, it doesn't apply here. 
+It is the second saturation voltage that we use. Looking to the right, 
+the typical saturation voltage is 0.45V. Therefore, this is the value
+we use in our calculation. 
+
+</p><p id="para1">The next equation calculates the time period of the input 
+signal. 
+
+</p><p id="para1">T<small>ON</small> + T<small>OFF</small> = 1/f= 1/100KHz= 10μs. 
+We will use the maximum 100KHz allowed, because the faster the switching speed of the circuit, the lower the inductance has to be in the circuit. In this circuit, we are using an inductor 
+in the microhenry range. We don't want to have to use a very large inductor that can't be obtained. To offset this, we use the highest possible frequency possible. The faster the circuit
+swiches on and off, the less the need for a greater inductance.
+
+
+
+</p><p id="para1">To calculate T<small>OFF</small>, we use the formula, T<small>OFF</small>= (T<small>ON</small> + T<small>OFF</small>)/(T<small>ON</small>/T<small>OFF</small> + 1)=
+10μs/2.7μs +1= 4μs. 
+
+</p><p id="para1">To calculate T<small>ON</small>, we use the formula, (T<small>ON</small> + T<small>OFF</small>) - T<small>OFF</small>=
+10μs - 4μs= 6μs. 
+
+</p><p id="para1">Next we calculate the value of the external capacitor that connects to pin 3 that sets the 
+switching frequency. 
+The capacitor, C<small>T</small>= 4 * 10<sup>-5</sup> * T<small>ON</small>= 4 * 10<sup>-5</sup> * 6μs= 240pF. 
+
+</p><p id="para1">I<small>PK</small> is the peak current that flows through the inductor and the diode. 
+I<small>PK</small> is 2 * I<small>O (MAX)</small> * (T<small>ON</small>/T<small>OFF</small> + 1) =
+2 * 0.1 * (3.3μs + 1)= 0.86A. So since 0.86A is the peak current that flows through both the inductor
+and the diode, both these components need to be rated for current peaks above this value. For example, 
+a 1A rating on both of these components will suffice, but it can't be under this value, or else the components
+can get destroyed from excess current. Therefore, it's very important to check the current specs for 
+each of these components before putting them in the circuit. 
+
+</p><p id="para1">R<small>SC</small> is the sense current resistor. 
+
+R<small>SC</small>= 0.3/I<small>PK</small> = 0.3/0.86A= 0.3 ohms.
+
+</p><p id="para1">L<small>MIN</small> is the minimum value the inductor should be for our circuit. 
+
+</p><p id="para1">L<small>MIN</small>= (V<small>IN (MIN) -V</small>SAT)/I<small>PK</small> * T<small>ON</small>= 
+(5V- 0.45V)/0.86A * 6μs= 31.7μH. So 31.7μH is the value of the inductor we will use in the circuit. 
+
+</p><p id="para1">C<small>O</small> is the, output or filter capacitor used for our circuit. We use 3 capacitors in 
+our circuit. One is to configure the switching frequency. The other 2 act as filter capacitors
+so that we don't get excess noise on the input signal or excess ripple on the output signal. 
+
+</p><p id="para1">C<small>O</small>= 9 * (I<small>OUT</small> * T<small>ON</small>)/V<small>RIPPLE</small>= 
+9 * (0.1 * 6μs/0.1)= 54μF. This is the output capacitor we need. 
+
+</p><p id="para1">The last thing we need to calculate, which is very important are the resistor values 
+that determine the voltage output. This circuit functions just as an op amp gain circuit. 
+
+</p><p id="para1">The formula for V<small>OUT</small>= 1.25 (1 + R<small>2</small>/R<small>1</small>). 
+Since we want an output voltage of 9V, let's first choose a generic value for R<small>1KΩ</small>
+for R<small>1</small>. Since R<small>1</small>=1KΩ, R<small>2</small> has to equal to 6.2KΩ in order 
+to equal 9V. Doing the math, we get, V<small>OUT</small>= 1.25 (1 + R<small>2</small>/R<small>1</small>)=
+1.25 (1 + (7KΩ/1KΩ))= 10V. Choosing the R<small>1</small> and R<small>2</small> resistors is actually 
+really neat because this part of the circuit determines the gain or amplitude of our output signal. 
+This part of the circuit is a noninverting op ap circuit. So its gain is the same as noninverting input 
+gain. The reference voltage at the noninverting terminal is 1.25V, so this is why you see 1.25V in this 
+equation. It is the reference voltage. Whatever voltage is fed into the noninverting terminal is the 
+reference voltage. This voltage gets multipled by 1 + R<small>2</small>/R<small>1</small> to get the 
+final voltage output. 
+
+</p><p id="para1">You can change this to whatever voltage you want. 
+
+</p><p id="para1">If you want 9V, then R<small>2</small>
+should be 6.2 times the voltage of R<small>1</small>.
+
+</p><p id="para1">If you want 12V, then R<small>2</small>
+should be 8.6 times the voltage of R<small>1</small>.
+
+</p><p id="para1">If you want 15V, then R<small>2</small>
+should be 11 times the voltage of R<small>1</small>.
+
+</p><p id="para1">It's pretty basic math how to calculate the gain. Just think whatever voltage you want, 
+is going to want as output, first divide that number by 1.25, then subtract 1. The remaining number is 
+R2/R1. Whatever that value is gets multipled by the R<small>1</small> resistor to get
+R<small>2</small>. And that's all. It's really that simple. 
+
+
+
+</p><p id="para1">And these are all the calculations that need to be computed for this circuit. 
+
+
+</p><p id="para1">So from these formulas, we find the value of all the components we need. 
+
+</p><p id="para1">Realize that you may not find the exact component values of those which we need. 
+
+</p><p id="para1">It may be hard to find a 0.3Ω resistor, so instead you can use a 1Ω resistor or take 2 
+1Ω resistors and place them in parallel which will give about 0.5Ω of resistance. 1Ω resistors are 
+readily available. 
+
+</p><p id="para1">31.7μH inductors aren't readily available, so you can approximate and use 
+33μH inductors, which are readily avaiable. 
+
+</p><p id="para1">54μF capacitors are not readily available, so you can just round up and use a readily available 100μF capacitor, 
+which is definitely easier. 
+
+</p><p id="para1">240pF won't be avaiable, so you can use a 270pF capacitor in place.
+
+</p><p id="para1">And 180Ω resistors are easily obtainable. This 180Ω resistor does not need to be calculated. 
+It's simply taken directly from the datasheet. Neither does the 100μF capacitor connected at the input 
+voltage. This is just a generic capacitor that functions to remove ripple and noise from the input voltage.
+
+
+
+<br><br><br>
+</p><h3>Connecting the Circuit</h3>
+<div id="rightads"><script async="" src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/f(1).txt"></script>
+<!-- Large image ads -->
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-7591845391773873" data-ad-slot="3467666961"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+<p id="para1">So we have our MC34063 chip. To power this chip, we connect +5V to V<small>CC</small>, 
+pin 6, and we connect the pin 4 to ground. This establishes power for the chip. Internally, there are
+a lot of components in the chip that need power, including transistors and comparators. After the input 
+voltage, to V<small>CC</small>, we connect a 100μF capacitor, which acts as a filter capacitor so that excess noise from the power supply is filtered out.
+
+
+</p><p id="para1">Pin 2 is the emitters of the 2 internal transistors, so pin 2 is connected to ground. 
+
+</p><p id="para1">Pin 3 is the timing capacitor. It determines the switching speed of the circuit. 
+
+
+</p><p id="para1">Pin 5 is inverting terminal of the comparator. The noninverting terminal is fed 1.25V from 
+the internal voltage regulator. To the inverting terminal, we place a resistor network composed of 2 resistors. 
+These decide the gain of the op amp comparator by the formula, V<small>OUT</small>= 1.25V (1 + R<small>2</small>/R<small>1</small>). 
+Since we want an output voltage of 10V, R<small>1</small>= 1KΩ and R<small>2</small>= 7KΩ. 
+
+</p><p id="para1">Pin 7 is the I<small>PK</small> sense pin. To this pin, we connect a 0.4Ω resistor based 
+on our calculations. Like stated above, if 2 1Ω resistors can be placed in parallel to give a voltage near this 
+level. 
+
+</p><p id="para1">Pin 1 and 8 are the collectors of the 2 transistors internally inside the chip. An 
+inductor is connected in between these 2 collectors. So the output of the transistors goes and charges up 
+the inductor when saturated. When turned off, the inductor discharges and charges up capacitor C<small>O</small>, the output 
+capacitor, through the diode. This is how the circuit has its boost functionality. The inductor stores charge
+and creates a magnetic field. Once the transistor is off and current stops flowing through the inductor, the 
+charge from the inductor discharges through the diode and charges up the capacitor. This charging up 
+takes place multiple times until the capacitor reaches the peak voltage intended based on the gain that
+the circuit is designed to reach. 
+
+</p><p id="para1">Since we are choosing 10V for the output capacitor, the capacitor must be rated at least for 
+this voltage. If you are designing your circuit for even a greater voltage gain, take into account
+that the capacitors must be rated for the voltages they are exposed to. This applies for the capacitor 
+at the input and the one at the output. 
+
+</p><p id="para1">And this is a classic switch mode power supply using the MC34063 chip to act as a step-up 
+or boost converter. 
+
+
+
+
+<br><br><br>
+
+</p><p id="para6">Related Resources</p>
+<p id="para1">
+		<a href="http://www.learningaboutelectronics.com/Articles/Square-to-triangle-wave-converter-circuit.php">How to Build a Square-to-Triangle Wave Converter Circuit</a><br><br>
+	<a href="http://www.learningaboutelectronics.com/Articles/Square-to-sine-wave-converter-circuit.php">How to Build a Square-to-Sine Wave Converter Circuit</a><br><br>
+     	<a href="http://www.learningaboutelectronics.com/Articles/555-timer-clock-circuit.php">How to Build a Clock Circuit with a 555 timer</a><br><br>
+	<a href="http://www.learningaboutelectronics.com/Articles/Astable-multivibrator-circuit-with-transistors.php">How to Build an Astable Multivibrator Circuit with Transistors</a><br><br>
+	<a href="http://www.learningaboutelectronics.com/Articles/4047-astable-multivibrator-circuit.php">How to Build a Multivibrator Circuit with a 4047 chip (for astable mode operation)</a><br><br>
+	<a href="http://www.learningaboutelectronics.com/Articles/4046-voltage-controlled-oscillator-VCO-circuit.php">How to Build a Voltage-Controlled Oscillator Circuit with a 4046 Chip</a><br><br>
+    	<a href="http://www.learningaboutelectronics.com/Articles/7414-schmitt-trigger-oscillator-circuit.php">How to Build an Oscillator Circuit with a 7414 Schmitt Trigger Inverter Chip</a><br><br>
+		<a href="http://www.learningaboutelectronics.com/Articles/Sine-wave-generator-circuit-with-a-555-timer.php">How to Build a Sine Wave Generator Circuit with a 555 Timer</a><br><br>
+	<a href="http://www.learningaboutelectronics.com/Articles/Ramp-generator-circuit-with-transistors.php">How to Build a Ramp Generator with Transistors</a><br><br>
+	<a href="http://learningaboutelectronics.com/Articles/Voltage-controlled-oscillator-VCO-circuit-with-a-555-timer.php">How to Build a Voltage-controlled Oscillator with a 555 Timer Chip</a><br><br>
+<!-- begin htmlcommentbox.com -->
+ 
+
+
+</p><div id="HCB_comment_box"><h3>Comments</h3><style type="text/css">#HCB_comment_box #HCB_comment_form_box{padding-bottom:1em}#HCB_comment_box .hcb-link{cursor:pointer}#HCB_comment_box .hcb-icon{border:0px transparent none}#HCB_comment_box textarea {display:block;width:100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;width: 100%}#HCB_comment_box blockquote{margin:10px;overflow:hidden}#HCB_comment_box .hcb-err{color:red}#HCB_comment_box .hcb-comment-tb{margin:0}#HCB_comment_box .comment{position:relative}#HCB_comment_box .comment .likes{position:absolute;top:0;right:0;opacity:0.8}#HCB_comment_box .comment .hcb-comment-tb a{visibility:hidden}#HCB_comment_box .comment:hover .hcb-comment-tb a{visibility:visible}#HCB_comment_box .gravatar{padding-right:2px}#HCB_comment_box input{margin-left:0}#HCB_comment_box input[type="file"]{display:none}#HCB_comment_box input.inputfile{width:.1px;height:.1px;opacity:0;overflow:hidden;position:absolute;z-index:-1}#HCB_comment_box input.inputfile+label {display: inline}</style><p id="hcb_msg"></p><div id="HCB_comment_form_box"><form accept-charset="utf-8" id="hcb_form" enctype="multipart/form-data" onsubmit="return hcb.submit()" action="https://www.htmlcommentbox.com/post" method="post"><input type="hidden" name="page" value="http://www.learningaboutelectronics.com/Articles/Switch-mode-power-supply-circuit-with-an-MC34063.php" id="hcb_form_page"><input type="hidden" id="hcb_refer" name="refer" value="http://www.learningaboutelectronics.com/Articles/Switch-mode-power-supply-circuit-with-an-MC34063.php#HCB_comment_box"><input type="hidden" name="opts" value="478" id="hcb_form_opts"><input type="hidden" name="mod" value="$1$wq1rdBcg$Sz4Jxvl/cDJ0gObHhdw9I1" id="hcb_form_mod"><input type="hidden" name="replies_to" value="" id="hcb_form_replies_to"><input type="hidden" name="charset" value="UTF-8" id="hcb_form_charset"><div class="hcb-wrapper-half input-field"><div class="hcb-shadow-t"> <div class="hcb-shadow-tl"></div> <div class="hcb-shadow-tr"></div> </div> <div class="hcb-shadow-m"><input id="hcb_form_name" class="hcb-shadow-r" name="name" type="text" value="" placeholder="Name"></div> <div class="hcb-shadow-b"> <div class="hcb-shadow-bl"></div> <div class="hcb-shadow-br"></div> </div><div class="hcb-shadow-clear"></div> </div><div class="hcb-wrapper"><div class="hcb-shadow-t"> <div class="hcb-shadow-tl"></div> <div class="hcb-shadow-tr"></div> </div> <div class="hcb-shadow-m"><textarea onkeypress="hcb.delta(event)" class="commentbox hcb-shadow-r" name="content" id="hcb_form_content" rows="4" placeholder="Enter your comment here"></textarea></div> <div class="hcb-shadow-b"> <div class="hcb-shadow-bl"></div> <div class="hcb-shadow-br"></div> </div><div class="hcb-shadow-clear"></div></div><div><input class="submit btn" id="hcb_submit" type="submit" value="Comment">&nbsp;<input type="file" name="hcb_file" id="hcb_file" class="inputfile" title="upload image"><label for="hcb_file" title="upload image"><a class="btn">Add Image</a></label><span class="home-desc">&nbsp;Not using&nbsp;</span><a target="_blank" href="https://www.htmlcommentbox.com/">Html Comment Box</a><span class="home-desc">&nbsp; yet?<div style="float:right"><small class="admin-link"><a href="https://accounts.google.com/o/oauth2/auth?scope=email&amp;state=http%3A//www.learningaboutelectronics.com/Articles/Switch-mode-power-supply-circuit-with-an-MC34063.php&amp;redirect_uri=https%3A//www.htmlcommentbox.com%2Foauth2callback&amp;response_type=code&amp;client_id=1058610383547-jradgb7j4d5t6ia6dq8gaoh9fvgl01kb.apps.googleusercontent.com&amp;approval_prompt=force"><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/door_in.png" alt="[login]" class="hcb-icon hcb-door-in"></a>&nbsp;</small></div><div style="clear:both"></div></span></div></form></div><div id="comments_list"><div class="comment" id="comment_13649102"><span class="date">(Mar 14, 2018) </span><span class="author"><b class="author-name">MS </b> said:</span> <blockquote>What is the power rating for the resistors?
+<br>And if I want to maximize the output current to be 1.5 A at 7 volt output what should be changed?
+<br>
+<br>Thanks </blockquote><p class="hcb-comment-tb"><a class="hcb-flag" href="javascript:hcb.flag(&#39;13649102&#39;)"><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/flag.png"> flag</a> <a class="hcb-like" href="javascript:hcb.like(&#39;13649102&#39;)"><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/like.png"> like</a> </p><div class="likes"><span>3 </span><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/like.png"></div></div><div class="comment" id="comment_13351277"><span class="date">(Oct 16, 2017) </span><span class="author"><b class="author-name">Anonymous </b> said:</span> <blockquote>Pete can tell the specifications for a 12V input and output is 18V with 100mA </blockquote><p class="hcb-comment-tb"><a class="hcb-flag" href="javascript:hcb.flag(&#39;13351277&#39;)"><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/flag.png"> flag</a> <a class="hcb-like" href="javascript:hcb.like(&#39;13351277&#39;)"><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/like.png"> like</a> </p><div class="likes"><span>1 </span><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/like.png"></div></div><div class="comment" id="comment_13311087"><span class="date">(Sept 24, 2017) </span><span class="author"><b class="author-name">Pete </b> said:</span> <blockquote>Hello. Great explanation. 
+<br> have built this to output 18V 100ma from 12 V input and used an electronic load to test.  It is fine when my load draws 100ma it works and the output is 18V as designed.  However, when I lower the current draw to below 80ma the output voltage goes up to 21V and if the load goes below 40ma the output Voltage oscillates between 18V and 22V.  Any ideas what is going on?  I though this was supposed to keep voltage constant at 18V for anything UP TO 100ma.
+<br>
+<br>Thanks </blockquote><p class="hcb-comment-tb"><a class="hcb-flag" href="javascript:hcb.flag(&#39;13311087&#39;)"><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/flag.png"> flag</a> <a class="hcb-like" href="javascript:hcb.like(&#39;13311087&#39;)"><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/like.png"> like</a> </p><div class="likes"><span>2 </span><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/like.png"></div></div><div class="comment" id="comment_13273109"><span class="date">(Aug 31, 2017) </span><span class="author"><b class="author-name">Mike </b> said:</span> <blockquote>The component list is missing the the 1N5819 diode:) </blockquote><p class="hcb-comment-tb"><a class="hcb-flag" href="javascript:hcb.flag(&#39;13273109&#39;)"><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/flag.png"> flag</a> <a class="hcb-like" href="javascript:hcb.like(&#39;13273109&#39;)"><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/like.png"> like</a> </p><div class="likes"><span>1 </span><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/like.png"></div></div><div class="comment" id="comment_11940590"><span class="date">(Apr 21, 2017) </span><span class="author"><b class="author-name">Upcycle Electronics </b> said:</span> <blockquote>  Nice broken down walkthrough of the function of this chip. FYI there is a simple calculator for this chip available. 
+<br>Disclosure: I have no affiliation with this person or their website. I'm just sharing a bookmarked link to a resource I find helpful.
+<br>
+<br><a target="_blank" rel="nofollow" href="http://www.nomad.ee/micros/mc34063a/index.shtml">www.nomad.ee/micros/mc34063a/index.shtml</a> </blockquote><p class="hcb-comment-tb"><a class="hcb-flag" href="javascript:hcb.flag(&#39;11940590&#39;)"><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/flag.png"> flag</a> <a class="hcb-like" href="javascript:hcb.like(&#39;11940590&#39;)"><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/like.png"> like</a> </p><div class="likes"><span>1 </span><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/like.png"></div></div><div class="comment" id="comment_11095292"><span class="date">(Aug 24, 2016) </span><span class="author"><b class="author-name">Dec </b> said:</span> <blockquote>Can I use this chip to stabilise the output of a 5V power bank so that the output is steady at 5V while the battery is discharging and decreasing in voltage? I want to power an attiny26 that reads voltage using ADC, but I'm afraid that the battery voltage is not reliable due to discharging. Or do you have a better idea? Thank you. </blockquote><p class="hcb-comment-tb"><a class="hcb-flag" href="javascript:hcb.flag(&#39;11095292&#39;)"><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/flag.png"> flag</a> <a class="hcb-like" href="javascript:hcb.like(&#39;11095292&#39;)"><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/like.png"> like</a> </p><div class="likes"><span>1 </span><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/like.png"></div></div><div class="comment" id="comment_10926938"><span class="date">(June 29, 2016) </span><span class="author hcb-mod"><b class="author-name">dlhylton (mod) </b> said:</span> <blockquote><img align="left" class="gravatar" src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/663d2b700139f41dbae0f291738f1a78">See this article on buffering: <a target="_blank" rel="nofollow" href="http://www.learningaboutelectronics.com/Articles/4050-buffer-circuit.php">www.learningaboutelectronics.com/Articles/4050-buffer-circuit.php</a>. With a 4050 chip, which is cheap, you can buffer the voltage output from a circuit and feed it into an output device such a  motor.  </blockquote><p class="hcb-comment-tb"><a class="hcb-flag" href="javascript:hcb.flag(&#39;10926938&#39;)"><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/flag.png"> flag</a> <a class="hcb-like" href="javascript:hcb.like(&#39;10926938&#39;)"><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/like.png"> like</a> </p><div class="likes"><span>2 </span><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/like.png"></div></div><div class="comment" id="comment_10926921"><span class="date">(June 29, 2016) </span><span class="author"><b class="author-name">azaturkmen </b> said:</span> <blockquote>thank you for your reply dlhylton, I am new with electronics, I think I have to learn how to buffer output. And I will be happy if you guide me what exactly  should i google to learn it.  </blockquote><p class="hcb-comment-tb"><a class="hcb-flag" href="javascript:hcb.flag(&#39;10926921&#39;)"><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/flag.png"> flag</a> <a class="hcb-like" href="javascript:hcb.like(&#39;10926921&#39;)"><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/like.png"> like</a> </p><div class="likes"><span>1 </span><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/like.png"></div></div><div class="comment" id="comment_10926894"><span class="date">(June 29, 2016) </span><span class="author hcb-mod"><b class="author-name">dlhylton (mod) </b> said:</span> <blockquote><img align="left" class="gravatar" src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/663d2b700139f41dbae0f291738f1a78">You may need the buffer the output. If the voltage drops it's probably due to the output impedance of the circuit being low. Do you have a buffer chip available? </blockquote><p class="hcb-comment-tb"><a class="hcb-flag" href="javascript:hcb.flag(&#39;10926894&#39;)"><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/flag.png"> flag</a> <a class="hcb-like" href="javascript:hcb.like(&#39;10926894&#39;)"><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/like.png"> like</a> </p><div class="likes"><span>1 </span><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/like.png"></div></div><div class="comment" id="comment_10926883"><span class="date">(June 29, 2016) </span><span class="author"><b class="author-name">azaturkmen </b> said:</span> <blockquote>hi, i followed your breadboard and i have 10v but when i connect a dc motor to output it drops to 3v and motor is not as fast as it has to be. I used 1N007 diode and 300pf capacitor. Any suggestions? </blockquote><p class="hcb-comment-tb"><a class="hcb-flag" href="javascript:hcb.flag(&#39;10926883&#39;)"><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/flag.png"> flag</a> <a class="hcb-like" href="javascript:hcb.like(&#39;10926883&#39;)"><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/like.png"> like</a> </p><div class="likes"><span>2 </span><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/like.png"></div></div></div><p> (Showing 1 to 10) <b class="hcb-link" onclick="hcb.changepage(1);"><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/arrow_right.png" class="hcb-icon" title="next page" alt="[next]"></b> </p><a href="https://www.htmlcommentbox.com/rss_clean?page=http%3A%2F%2Fwww.learningaboutelectronics.com%2FArticles%2FSwitch-mode-power-supply-circuit-with-an-MC34063.php&amp;opts=478&amp;mod=$1$wq1rdBcg$Sz4Jxvl/cDJ0gObHhdw9I1" style="text-decoration:none"><img src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/feed.png" class="hcb-icon" alt="rss"> </a></div>
+ 
+
+
+<link rel="stylesheet" type="text/css" href="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/skin.css">
+ 
+
+
+<script type="text/javascript" language="javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={ };} (function(){s=document.createElement("script");s.setAttribute("type","text/javascript");s.setAttribute("src", "http://www.htmlcommentbox.com/jread?page="+escape((window.hcb_user && hcb_user.PAGE)||(""+window.location)).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24Sz4Jxvl/cDJ0gObHhdw9I1"+"&opts=478&num=10");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+ 
+<!-- end htmlcommentbox.com -->
+<br><br>
+
+<div style="float:left"><script async="" src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/f(1).txt"></script>
+<!-- Mobile horizontal banner ad -->
+<ins class="adsbygoogle" style="display:inline-block;width:320px;height:100px" data-ad-client="ca-pub-7591845391773873" data-ad-slot="5919600282"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+
+<o:p></o:p><p></p>
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+	</div>
+	<!-- end content -->
+	
+</div>
+<!-- end page -->
+<!-- start footer -->
+﻿
+
+<div id="footer">
+	<div class="fcenter">
+		<a href="http://www.learningaboutelectronics.com/">Home</a> | 
+		<a href="http://www.learningaboutelectronics.com/Articles">Articles</a> |
+		<a href="http://www.learningaboutelectronics.com/Projects">Projects</a> |
+		<a href="http://www.learningaboutelectronics.com/Programming">Programming</a> |
+		<a href="http://www.learningaboutelectronics.com/Calculators">Calculators</a> |
+		<a href="http://www.learningaboutelectronics.com/Contact">Contact</a>
+</div><br><br>
+<div align="center">© 2018 All Rights Reserved</div>
+
+<!-- end footer -->
+
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'p3plcpnl0769'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/tcc_l.combined.1.0.6.min.js.download"></script><script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'p3plcpnl0769'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src="./How to Build a Switch Mode Power Supply Circuit with an MC34063_files/tcc_l.combined.1.0.6.min.js.download"></script>
+</div></div></body></html>

@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name USBC_6PIN)(type Legacy)(uri "C:/Users/alexa/Desktop/Everything/Electrical Engineering/symbol libraries/USBC-6PIN/TYPE-C-31-M-17.lib")(options "")(descr ""))
+  (lib (name PiPowerSystem-rescue)(type Legacy)(uri ${KIPRJMOD}/PiPowerSystem-rescue.lib)(options "")(descr ""))
+)
